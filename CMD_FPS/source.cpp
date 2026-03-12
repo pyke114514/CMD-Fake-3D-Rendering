@@ -185,10 +185,10 @@ public:
 					float fTestAngle = atan2f((fTestPointY - fBlockMidY), (fTestPointX - fBlockMidX));
 
 					if (fTestAngle >= -PI * 0.25f && fTestAngle < PI * 0.25f) {
-						fSampleX = fTestPointY - (float)nTestY;
+						fSampleX = 1 - (fTestPointY - (float)nTestY);
 					}
 					if (fTestAngle >= PI * 0.25f && fTestAngle < PI * 0.75f) {
-						fSampleX = fTestPointX - (float)nTestX;
+						fSampleX = 1 - (fTestPointX - (float)nTestX);
 					}
 					if (fTestAngle < -PI * 0.25f && fTestAngle >= -PI * 0.75f) {
 						fSampleX = fTestPointX - (float)nTestX;
